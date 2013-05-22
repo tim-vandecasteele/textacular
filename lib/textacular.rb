@@ -139,7 +139,7 @@ module Textacular
   end
 
   def fuzzy_condition_string(table_name, column, search_term)
-    "(#{table_name}.#{column} % #{search_term})"
+    "(#{table_name}.#{column} ~~* #{search_term})"
   end
 
   def assemble_query(similarities, conditions, exclusive)
